@@ -1,5 +1,5 @@
 *{
-    margin: 0;
+    margin: 0;   
     padding: 0;
     box-sizing: border-box;
 }
@@ -39,4 +39,59 @@
     border: 0.2px solid;
     height: 25px;
     width: 100px;
+}
+
+.top-left-cell
+{
+    border-right: 0.1px solid;
+    border-bottom: 0.1px solid;
+    height: 25px;
+    width: 30px;
+    background-color: grey;
+    position: absolute;
+
+}
+
+.top-row
+{
+    display: flex;
+    position: absolute;
+    background-color: grey;
+    left: 30px;
+}
+
+.top-row-cell
+{
+    height: 25px;
+    width: 100px;
+    border-bottom: 0.1px solid;
+    border-left: 0.1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-col
+{
+    background-color: grey;
+    position: absolute;
+    left: 0px;
+    top:85px;
+}
+
+.left-col-cell
+{
+    height: 25px;
+    width: 30px;
+    border-bottom: 0.1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cells
+{
+    position: absolute;
+    top: 85px;
+    left:30px;
 }
