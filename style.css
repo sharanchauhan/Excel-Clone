@@ -1,68 +1,60 @@
 *{
-    margin: 0;   
-    padding: 0;
+    margin: 0px;   
+    padding: 0px;
     box-sizing: border-box;
 }
 
-.menu-options
-{
+.menu-options{
     border: 0.5px solid;
     height: 30px;
 }
 
-.address-content
-{
+.address-content{
     border: 0.5px solid;
     height: 30px;
 }
 
-.cells-content
-{
-    height: 89vh;
-    background-color: yellow;
+.cells-content{
+    height:85vh;
+    background-color: aquamarine;
     overflow: auto;
+    position: relative;
 }
 
-.sheets
-{
+.sheets{
     border: 0.5px solid;
     height: 30px;
 }
 
-.row
-{
+.row{
     display: flex;
 }
 
-.cell
-{
+.cell{
     border: 0.2px solid;
-    height: 25px;
+    height: 30px;
     width: 100px;
 }
 
-.top-left-cell
-{
+.top-left-cell{
     border-right: 0.1px solid;
     border-bottom: 0.1px solid;
-    height: 25px;
+    height: 30px;
     width: 30px;
     background-color: grey;
     position: absolute;
 
 }
 
-.top-row
-{
+.top-row{
     display: flex;
     position: absolute;
     background-color: grey;
     left: 30px;
 }
 
-.top-row-cell
-{
-    height: 25px;
+.top-row-cell{
+    height: 30px;
     width: 100px;
     border-bottom: 0.1px solid;
     border-left: 0.1px solid;
@@ -71,17 +63,15 @@
     align-items: center;
 }
 
-.left-col
-{
+.left-col{
     background-color: grey;
     position: absolute;
     left: 0px;
-    top:85px;
+    top:30px;
 }
 
-.left-col-cell
-{
-    height: 25px;
+.left-col-cell{
+    height: 30px;
     width: 30px;
     border-bottom: 0.1px solid;
     display: flex;
@@ -89,9 +79,8 @@
     align-items: center;
 }
 
-.cells
-{
+.cells{
     position: absolute;
-    top: 85px;
+    top:30px;
     left:30px;
 }
