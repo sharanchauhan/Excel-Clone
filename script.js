@@ -3,6 +3,8 @@ let leftCol=document.querySelector(".left-col");
 let topLeftCell=document.querySelector(".top-left-cell");
 let allCells=document.querySelectorAll(".cell");
 let addressInput=document.querySelector("#address");
+let formulaInput=document.querySelector("#formula");
+let lastSelectedCell;
 
 cellsContentDiv.addEventListener("scroll",function(e)
 {
@@ -23,10 +25,13 @@ for(let i=0;i<allCells.length;i++)
         let colId=Number(e.target.getAttribute("colId"));
         let address=String.fromCharCode(65+colId)+(rowId+1)+"";
         addressInput.value=address;
+        let cellObject=db[rowId][colId];
+        formulaInput.value=cellObject.formula;
     });
     // Storing the value in the cell in db
     allCells[i].addEventListener("blur",function(e)
     {
+        lastSelectedCell=e.target;
         let cellValue=e.target.textContent;
         let {rowId,colId}=getRowIdColIdFromElement(e.target);
         let cellObject=db[rowId][colId];
@@ -40,11 +45,11 @@ for(let i=0;i<allCells.length;i++)
     });
 }
 
-function getRowIdColIdFromElement(element){
-    let rowId  = element.getAttribute("rowid");
-    let colId = element.getAttribute("colid");
-    return {
-        rowId,
-        colId
+formulaInput.addEventListener("blur",function(e)
+{
+    let formula=e.target.value;
+    if(formula)
+    {
+        
     }
-}
+});

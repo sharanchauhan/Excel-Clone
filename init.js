@@ -44,7 +44,8 @@ function initDb()
             let name=String.fromCharCode(65+i)+(i+1)+"";
             let cellObject={
                 name:name,
-                value:""
+                value:"",
+                formula:""
             }
             row.push(cellObject);
         }
