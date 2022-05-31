@@ -50,6 +50,14 @@ formulaInput.addEventListener("blur",function(e)
     let formula=e.target.value;
     if(formula)
     {
-        
+        let {rowId,colId}=getRowIdColIdFromElement(lastSelectedCell);
+        let cellObject=db[rowId][colId];
+        let computedValue=solveFormula(cellObject);
+        // Update db
+        cellObject.value=computedValue;
+        cellObject.formula=formula;
+        // Update UI
+        lastSelectedCell.textContent=computedValue;
+
     }
 });
