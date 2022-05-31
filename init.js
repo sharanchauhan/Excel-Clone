@@ -50,5 +50,3 @@ function initDb(){
     }
 }
 initDb();
-
-console.log(db);
