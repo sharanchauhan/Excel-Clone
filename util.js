@@ -10,27 +10,27 @@ function getRowIdColIdFromElement(element)
 
 function getRowIdColIdFromAddress(address)
 {
-    let colId=address.charCodeAt(0)-65;
-    let rowID=Number(address.substring(1))-1;
-    return{
-        rowID,colId
+    let colId = address.charCodeAt(0)-65;
+    let rowId = Number(address.substring(1))-1;
+    return {
+        rowId,colId
     }
 }
 
-function solveFormula(formula)
-{
-    let formulaComps=formula.split(" ");
-    for(let i=0;i<formulaComps.length;i++)
-    {
-        let formulaComp=formulaComps[i];
-        if(formulaComp[0]>="A" && formulaComp[0]<="Z")
-        {
-            let {rowId,colId}=getRowIdColIdFromAddress(formulaComp);
-            let cellObject=db[rowId][colId];
-            let value=cellObject.value;
-            formula=formula.replace(formulaComp,value);
+function solveFormula(formula){
+    //formula = A1 + B2 + 2 - C3
+    let formulaComps = formula.split(" ");
+    //formulaComps = [A1,+,B2,+,2,-,C3];
+    for(let i=0;i<formulaComps.length;i++){
+        let formulaComp = formulaComps[i];
+        if(formulaComp[0]>="A" && formulaComp[0]<="Z"){
+            let {rowId,colId} = getRowIdColIdFromAddress(formulaComp);
+            let cellObject = db[rowId][colId];
+            let value = cellObject.value;
+            formula = formula.replace(formulaComp,value);
         }
     }
-    let computedValue=eval(formula);
+    //formula -> 2 * 3 + 4 - 3
+    let computedValue = eval(formula);
     return computedValue;
 }
