@@ -41,6 +41,7 @@ for(let i=0;i<allCells.length;i++)
         }
         cellObject.value = cellValue;
         console.log("After Update",cellObject);
+        updateChildren(cellObject);
     })
 }
 
