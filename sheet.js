@@ -3,7 +3,8 @@ let addSheetBtn = document.querySelector(".add-sheet");
  let sheetId = 0;
 
 
- addSheetBtn.addEventListener("click",function(){
+ addSheetBtn.addEventListener("click",function()
+ {
      sheetId++;
      let activeSheet = document.querySelector(".active-sheet");
      activeSheet.classList.remove("active-sheet");
