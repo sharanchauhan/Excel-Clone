@@ -23,6 +23,7 @@
 {
     height: 20px;
     display: flex;
+    border-bottom: 0.5px solid var(--border-color);
 }
 
 .cells-content
