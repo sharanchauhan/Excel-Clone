@@ -24,12 +24,13 @@ function sheetListener(sheet){
         if(sheet.classList.contains("active-sheet")){
             return;
         }
+        initUi();
         let activeSheet = document.querySelector(".active-sheet");
         activeSheet.classList.remove("active-sheet");
         sheet.classList.add("active-sheet");
         let sheetId = sheet.getAttribute("sheetId");
         // console.log(sheet);
-        initUi();
+        
         db = sheetsDB[sheetId].db;
         visitedCells=sheetsDB[sheetId].visitedCells;
         setUi();
